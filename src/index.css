@@ -1,0 +1,18 @@
+@import "tailwindcss";
+/* index.scss */
+
+/* index.css or tailwind.config.js */
+
+@font-face {
+  font-family: 'Inter', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
