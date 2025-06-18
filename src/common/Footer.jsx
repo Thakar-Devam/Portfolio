@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className="bg-[#0F0F0F] text-white py-6 px-6 md:px-20">
+        <footer className="bg-[#0F0F0F] text-white py-6 px-6 md:px-20 h-48">
             <div className="flex flex-col-reverse md:flex-row justify-between items-center space-y-6 md:space-y-0 md:space-x-6">
                 
                 {/* Copyright */}
@@ -13,7 +13,7 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="flex space-x-6 justify-center">
                     <a
-                        href="https://linkedin.com/in/yourprofile"
+                        href="www.linkedin.com/in/devam-thakar"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-yellow-400 transition"
@@ -22,7 +22,7 @@ const Footer = () => {
                         <FaLinkedin size={30} />
                     </a>
                     <a
-                        href="https://github.com/yourusername"
+                        href="https://github.com/Thakar-Devam"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-yellow-400 transition"
@@ -31,7 +31,7 @@ const Footer = () => {
                         <FaGithub size={30} />
                     </a>
                     <a
-                        href="https://instagram.com/yourhandle"
+                        href="https://www.instagram.com/devammm_12?igsh=MTRydXQ0NzE2b2RoNA=="
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-yellow-400 transition"
