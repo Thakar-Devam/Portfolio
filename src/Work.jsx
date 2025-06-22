@@ -4,25 +4,25 @@ const projects = [
   {
     title: 'Aechartered',
     url: 'https://www.aechartered.com/',
-    image: '/assets/aechartered.png',
+    image: 'assets/aechartered.png',
     description: 'A luxury private jet rental website allowing users to search, compare, and book private jets globally. It features an intuitive booking form integrated with worldwide airport and fleet data, providing a seamless and elite user experience. The platform is designed for speed, clarity, and modern aesthetics, ideal for high-end clientele.',
   },
   {
     title: 'Snapbeep',
     url: 'https://snapbeep.com/',
-    image: '/assets/snapbeep.png',
+    image: 'assets/snapbeep.png',
     description: 'Snapbeep is a full-service advertising and media agency with a digital-first approach. It offers a wide range of creative services—from brand building to website design—for clients around the globe. The website is built using React, with UI components styled using ShadCN for a modern and consistent design system. Framer Motion is used to enhance user interaction through smooth animations.',
   },
   {
     title: 'Bariecano - Luxury Clothing Brand',
     url: 'https://barisceano-client-tk0r.onrender.com/products/women',
-    image: '/assets/bariecano.png',
+    image: 'assets/bariecano.png',
     description: 'Bariceano is a US-based luxury clothing eCommerce website that specializes in premium hoodies, T-shirts, and sweatshirts. Designed with a clean,responsive layouts, and a strong focus on brand storytelling to engage fashion-forward audiences.',
   },
   {
     title: 'Admin Dashboard (Confidential)',
     url: '',
-    image: '/assets/adminpanel.png',
+    image: 'assets/adminpanel.png',
     description: 'A feature-rich admin panel for Bariceano built with React, handling user management, product operations (CRUD), permissions, and real-time updates. Integrated with custom hooks, APIs, and enhanced UI using Tailwind and component libraries like ShadCN.',
   },
 ];

@@ -46,7 +46,7 @@ const Navbar = () => {
           className="ml-2 bg-[#FCCA83] text-black font-semibold px-4 py-1 rounded-full hover:bg-[#f3cb9d] transition"
         >
           <a
-            href="/assets/RESUME THAKAR DEVAM.pdf"
+            href="assets/RESUME THAKAR DEVAM.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm px-3 py-1 transition-all"
@@ -101,7 +101,7 @@ const Navbar = () => {
             className=" bg-[#FCCA83] text-black font-semibold px-4 py-1 mt-1 w-full rounded-full hover:bg-[#f3cb9d] transition"
           >
             <a
-              href="/assets/RESUME THAKAR DEVAM.pdf"
+              href="assets/RESUME THAKAR DEVAM.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm px-3 py-1 transition-all"

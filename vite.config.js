@@ -6,8 +6,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),
     tailwindcss(),
-    
   ],
+  base: "/Portfolio/",
   extend: {
     animation: {
       'spin-slow': 'spin 10s linear infinite',
