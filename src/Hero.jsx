@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       style={{
-        backgroundImage: "url('/assets/4.png')",
+        backgroundImage: "url('assets/4.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
