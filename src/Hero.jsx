@@ -5,8 +5,11 @@ import FloatingContact from './FloatingContact';
 const Hero = () => {
   return (
     <section
-      style={{
-        backgroundImage: "url('assets/4.png')",
+       style={{
+        backgroundImage:
+          window.innerWidth < 768
+            ? "url('assets/mobilehero.png')"
+            : "url('assets/4.png')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
