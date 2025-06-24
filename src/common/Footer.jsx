@@ -13,7 +13,7 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="flex space-x-6 justify-center">
                     <a
-                        href="www.linkedin.com/in/devam-thakar"
+                        href="https://www.linkedin.com/in/devam-thakar"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-yellow-400 transition"
