@@ -1,22 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaReact, FaJs, FaCss3Alt, FaGithub, FaFigma } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiSass, SiRender, SiVercel, SiHostinger,SiNextdotjs ,SiTypescript  } from 'react-icons/si';
+import { FaReact, FaJs, FaGithub, FaFigma } from 'react-icons/fa';
+import { SiTailwindcss, SiGit , SiSass, SiRender, SiVercel, SiHostinger,SiNextdotjs ,SiTypescript  } from 'react-icons/si';
 
 const techStack = [
   { name: 'React.js', icon: <FaReact />, color: '#61DBFB' },
   { name: 'JavaScript', icon: <FaJs />, color: '#F7DF1E' },
-  { name: 'Next.js', icon: <SiNextdotjs  />, color: '#000' },
-  { name: 'TypeScript', icon: <SiTypescript   />, color: '#007BCC' },
+  { name: 'Next.js', icon: <SiNextdotjs />, color: '#000' },
+  { name: 'TypeScript', icon: <SiTypescript />, color: '#007BCC' },
   { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#38BDF8' },
-  { name: 'CSS', icon: <FaCss3Alt />, color: '#1572B6' },
   { name: 'SCSS', icon: <SiSass />, color: '#CD6799' },
-  { name: 'GitHub', icon: <FaGithub />, color: '#000' },
-  { name: 'REST APIs', icon: <SiPostman />, color: '#FF6C37' },
+  { name: 'REST APIs', icon: <SiGit  />, color: '#DF4C37' },
 ];
 
 const tools = [
   { name: 'Figma', icon: <FaFigma />, color: '#F24E1E' },
+  { name: 'GitHub', icon: <FaGithub />, color: '#000' },
   { name: 'Render', icon: <SiRender />, color: '#475569' },
   { name: 'Vercel', icon: <SiVercel />, color: '#000000' },
   { name: 'Hostinger', icon: <SiHostinger />, color: '#673DE6' },
