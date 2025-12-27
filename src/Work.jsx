@@ -14,14 +14,26 @@ const projects = [
     description: 'Snapbeep is a full-service advertising and media agency with a digital-first approach. It offers a wide range of creative services—from brand building to website design—for clients around the globe. The website is built using React, with UI components styled using ShadCN for a modern and consistent design system. Framer Motion is used to enhance user interaction through smooth animations.',
   },
   {
+    title: 'Eura India',
+    url: 'https://euraindia.com/',
+    image: 'assets/euraindia.png',
+    description: 'Eura India is a premium bathware brand delivering Everyday Luxury through elegant, durable, and globally trusted sanitary solutions designed for modern living. ',
+  },
+  {
     title: 'Bariecano - Luxury Clothing Brand',
     url: 'https://barisceano-client-tk0r.onrender.com/products/women',
     image: 'assets/bariecano.png',
     description: 'Bariceano is a US-based luxury clothing eCommerce website that specializes in premium hoodies, T-shirts, and sweatshirts. Designed with a clean,responsive layouts, and a strong focus on brand storytelling to engage fashion-forward audiences.',
   },
   {
+    title: 'Carry Cab',
+    url: 'https://carrycabs.com/',
+    image: 'assets/carrycabs.png',
+    description: 'Carry Cab is a reliable cab service offering safe, comfortable, and affordable travel solutions, focused on punctuality, professional drivers, and a smooth customer experience for everyday commuting and long-distance journeys.',
+  },
+  {
     title: 'Admin Dashboard (Confidential)',
-    url: '',
+    url: '#',
     image: 'assets/adminpanel.png',
     description: 'A feature-rich admin panel for Bariceano built with React, handling user management, product operations (CRUD), permissions, and real-time updates. Integrated with custom hooks, APIs, and enhanced UI using Tailwind and component libraries like ShadCN.',
   },

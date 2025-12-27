@@ -22,7 +22,7 @@ const Hero = () => {
       <div className="w-full max-w-2xl text-center md:text-left">
         {/* Intro line */}
         <p className="text-sm sm:text-base text-gray-400 mb-2">
-          Howdy! I’m a Web Developer building strong, clean code for modern, elegant interfaces.
+          Howdy! I'm a Web Developer building strong, clean code for modern, elegant interfaces.
         </p>
 
         {/* Big name */}
