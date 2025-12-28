@@ -1,13 +1,16 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
-import { FaReact, FaJs, FaGithub, FaFigma } from 'react-icons/fa';
-import { SiTailwindcss, SiGit , SiSass, SiRender, SiVercel, SiHostinger,SiNextdotjs ,SiTypescript  } from 'react-icons/si';
+import { FaReact, FaJs, FaGitAlt , FaFigma } from 'react-icons/fa';
+import { SiTailwindcss, SiGit , SiSass, SiRender, SiVercel, SiMongodb ,SiHostinger,SiNextdotjs ,SiTypescript  } from 'react-icons/si';
+import { SiPostman } from "react-icons/si";
 
 const techStack = [
   { name: 'React.js', icon: <FaReact />, color: '#61DBFB' },
   { name: 'JavaScript', icon: <FaJs />, color: '#F7DF1E' },
   { name: 'Next.js', icon: <SiNextdotjs />, color: '#000' },
   { name: 'TypeScript', icon: <SiTypescript />, color: '#007BCC' },
+  { name: 'MongoDB', icon: <SiMongodb />, color: '#499D4A' },
   { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#38BDF8' },
   { name: 'SCSS', icon: <SiSass />, color: '#CD6799' },
   { name: 'REST APIs', icon: <SiGit  />, color: '#DF4C37' },
@@ -15,10 +18,11 @@ const techStack = [
 
 const tools = [
   { name: 'Figma', icon: <FaFigma />, color: '#F24E1E' },
-  { name: 'GitHub', icon: <FaGithub />, color: '#000' },
+  { name: 'Git', icon: <FaGitAlt  />, color: '#000' },
   { name: 'Render', icon: <SiRender />, color: '#475569' },
   { name: 'Vercel', icon: <SiVercel />, color: '#000000' },
   { name: 'Hostinger', icon: <SiHostinger />, color: '#673DE6' },
+  { name: 'Postman', icon: <SiPostman />, color: '#FE6B39' },
 ];
 
 
@@ -62,7 +66,7 @@ const Skills = () => {
 
       {/* Tools */}
       <div className="mb-16">
-        <h3 className="text-2xl font-semibold mb-6">Tools I Use</h3>
+        <h3 className="text-2xl font-semibold mb-6">Tools I familiar  with</h3>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
           {tools.map((item, idx) => (
             <motion.div

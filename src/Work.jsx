@@ -5,13 +5,13 @@ const projects = [
     title: 'Aechartered',
     url: 'https://www.aechartered.com/',
     image: 'assets/aechartered.png',
-    description: 'A luxury private jet rental website allowing users to search, compare, and book private jets globally. It features an intuitive booking form integrated with worldwide airport and fleet data, providing a seamless and elite user experience. The platform is designed for speed, clarity, and modern aesthetics, ideal for high-end clientele.',
+    description: 'A luxury private jet rental website allowing users to search, compare, and book private jets globally. It features an intuitive booking form integrated with worldwide airport and fleet data, providing a seamless and elite user experience.',
   },
   {
     title: 'Snapbeep',
     url: 'https://snapbeep.com/',
     image: 'assets/snapbeep.png',
-    description: 'Snapbeep is a full-service advertising and media agency with a digital-first approach. It offers a wide range of creative services—from brand building to website design—for clients around the globe. The website is built using React, with UI components styled using ShadCN for a modern and consistent design system. Framer Motion is used to enhance user interaction through smooth animations.',
+    description: 'Snapbeep is a full-service advertising and media agency with a digital-first approach. It offers a wide range of creative services—from brand building to website design—for clients around the globe.',
   },
   {
     title: 'Eura India',
@@ -20,7 +20,7 @@ const projects = [
     description: 'Eura India is a premium bathware brand delivering Everyday Luxury through elegant, durable, and globally trusted sanitary solutions designed for modern living. ',
   },
   {
-    title: 'Bariecano - Luxury Clothing Brand',
+    title: 'Barisceano - Luxury Clothing Brand',
     url: 'https://barisceano-client-tk0r.onrender.com/products/women',
     image: 'assets/bariecano.png',
     description: 'Bariceano is a US-based luxury clothing eCommerce website that specializes in premium hoodies, T-shirts, and sweatshirts. Designed with a clean,responsive layouts, and a strong focus on brand storytelling to engage fashion-forward audiences.',
@@ -46,14 +46,14 @@ const Work = () => {
       Latest Work
     </h2>
 
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="grid grid-cols-1 max-md:grid-cols-3 md:grid-cols-2 gap-10">
       {projects.map((project, index) => (
         <div
           key={index}
-          className="group bg-white border border-[#f0e6db] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
+          className="group bg-white border border-[#f0e6db] h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
         >
           <a href={project.url} target="_blank" rel="noopener noreferrer">
-            <div className="relative aspect-[16/9] bg-black flex items-center justify-center overflow-hidden">
+            <div className="relative aspect-[16/9] bg-black max-md:h-[250px] flex items-center justify-center overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}

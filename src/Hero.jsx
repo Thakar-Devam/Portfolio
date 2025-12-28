@@ -20,10 +20,6 @@ const Hero = () => {
 
       {/* Text block with mobile-center, desktop-left */}
       <div className="w-full max-w-2xl text-center md:text-left">
-        {/* Intro line */}
-        <p className="text-sm sm:text-base text-gray-400 mb-2">
-          Howdy! I'm a Web Developer building strong, clean code for modern, elegant interfaces.
-        </p>
 
         {/* Big name */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-[#F9C47E] mb-2 leading-tight">
@@ -45,8 +41,7 @@ const Hero = () => {
 
         {/* Description */}
         <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">
-          I specialize in building responsive, accessible, and high-performance web apps using
-          React, Tailwind CSS, and Vite. Focused on writing maintainable code and delivering great UI/UX.
+         I specialize in building responsive, accessible, and high-performance frontend using React, Next JS. Focused on writing maintainable code.
         </p>
       </div>
     </section>
