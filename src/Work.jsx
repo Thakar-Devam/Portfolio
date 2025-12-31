@@ -53,7 +53,7 @@ const Work = () => {
           className="group bg-white border border-[#f0e6db] h-full rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition duration-300"
         >
           <a href={project.url} target="_blank" rel="noopener noreferrer">
-            <div className="relative aspect-[16/9] bg-black max-md:h-[250px] flex items-center justify-center overflow-hidden">
+            <div className="relative aspect-[16/9] bg-black max-md:h-[250px] max-sm:h-auto flex items-center justify-center overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
