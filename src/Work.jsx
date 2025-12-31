@@ -46,7 +46,7 @@ const Work = () => {
       Latest Work
     </h2>
 
-    <div className="grid grid-cols-1 max-md:grid-cols-3 md:grid-cols-2 gap-10">
+    <div className="grid max-sm:grid-cols-1 max-md:grid-cols-3 md:grid-cols-2 gap-10">
       {projects.map((project, index) => (
         <div
           key={index}
