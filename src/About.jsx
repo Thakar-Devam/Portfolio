@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="relative w-full bg-white px-6 md:px-20  overflow-hidden">
+    <section className="relative w-full bg-white px-6 md:px-20 max-sm:pt-12 overflow-hidden">
 
       {/* Heading */}
       <motion.h2

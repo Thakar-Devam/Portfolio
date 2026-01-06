@@ -19,7 +19,7 @@ const Hero = () => {
       <FloatingContact />
 
       {/* Text block with mobile-center, desktop-left */}
-      <div className="w-full max-w-2xl text-center md:text-left">
+      <div className="w-full max-w-2xl max-sm:text-left md:text-left">
 
         {/* Big name */}
         <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold text-[#F9C47E] mb-2 leading-tight">
