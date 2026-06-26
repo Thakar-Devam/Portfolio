@@ -11,7 +11,7 @@ const PROJECTS = [
     category: 'AI Platform',
     description: 'AI-powered platform that analyzes resumes and job descriptions to generate job match scores, identify skill gaps, and provide personalized interview preparation.',
     image: null,
-    links: [{ label: 'View Project', href: '#' }],
+    links: [{ label: 'View Project', href: 'https://interviewai-client-ne9k.onrender.com' }],
     tags: ['React', 'AI', 'Node.js', 'MongoDB'],
   },
   {
@@ -29,7 +29,7 @@ const PROJECTS = [
     category: 'VS Code Extension',
     description: 'Productivity-focused VS Code extension that helps developers quickly create and organize notes without leaving the editor.',
     image: BASE + 'wingNote.png',
-    links: [{ label: 'Marketplace', href: '#' }],
+    links: [{ label: 'Marketplace', href: 'https://open-vsx.org/extension/wingnote/wingnote' }],
     tags: ['VS Code API', 'TypeScript', 'Extension'],
   },
   {
@@ -38,7 +38,7 @@ const PROJECTS = [
     category: 'Business Website',
     description: 'Professional business website for Maadhu Creatives showcasing services, portfolio, and brand identity through a clean and responsive experience.',
     image: BASE + 'maadhuCreatives.png',
-    links: [{ label: 'Visit Website', href: '#' }],
+    links: [{ label: 'Visit Website', href: 'https://maadhucreatives.com/' }],
     tags: ['React', 'Tailwind', 'Responsive'],
   },
   {
@@ -47,7 +47,7 @@ const PROJECTS = [
     category: 'Art Showcase',
     description: 'Handcrafted miniature artwork website designed to showcase collections with elegant layouts and smooth navigation.',
     image: BASE + 'maadhuminiature.png',
-    links: [{ label: 'Visit Website', href: '#' }],
+    links: [{ label: 'Visit Website', href: 'https://maadhuminiature.com/' }],
     tags: ['React', 'Animations', 'Gallery'],
   },
   {
@@ -56,7 +56,7 @@ const PROJECTS = [
     category: 'Cab Booking',
     description: 'Modern cab booking website featuring responsive design, interactive animations, and an optimized user experience.',
     image: BASE + 'carrycabs.png',
-    links: [],
+    links: [{ label: 'Visit Website', href: 'https://carrycabs.com/' }],
     tags: ['React', 'Framer Motion', 'Responsive'],
   },
   {
@@ -65,7 +65,7 @@ const PROJECTS = [
     category: 'Finance Website',
     description: 'Professional website for a chartered accountancy firm with service listings, team profiles, and client inquiry forms.',
     image: BASE + 'aechartered.png',
-    links: [],
+    links: [{ label: 'Visit Website', href: 'https://www.aechartered.com/' }],
     tags: ['React', 'Tailwind', 'Responsive'],
   },
   {
@@ -74,7 +74,7 @@ const PROJECTS = [
     category: 'Utility App',
     description: 'A utility application designed for quick captures and alerts, built with a focus on speed and simplicity.',
     image: BASE + 'snapbeep.png',
-    links: [],
+    links: [{ label: 'Visit Website', href: 'https://snapbeep.com/' }],
     tags: ['React', 'Node.js', 'WebSockets'],
   },
   {
@@ -83,7 +83,7 @@ const PROJECTS = [
     category: 'Business Website',
     description: 'Corporate business website for Eura India with service showcases, contact management, and a clean professional layout.',
     image: BASE + 'euraindia.png',
-    links: [],
+    links: [{ label: 'Visit Website', href: 'https://euraindia.com/' }],
     tags: ['React', 'Tailwind', 'Responsive'],
   },
   {
@@ -101,7 +101,7 @@ export default function Projects() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section id="projects" className="relative py-28 px-6 md:px-12 max-w-7xl mx-auto">
+    <section id="projects" className="relative py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto">
       <motion.p
         initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
         className="text-sm text-white/40 tracking-widest uppercase mb-4 font-mono"
@@ -111,12 +111,12 @@ export default function Projects() {
 
       <motion.h2
         initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }}
-        className="text-4xl md:text-5xl font-bold text-white mb-16"
+        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-10 md:mb-16"
       >
         Selected work
       </motion.h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {PROJECTS.map((p, i) => (
           <ProjectCard key={p.id} project={p} index={i} onClick={() => setSelected(p)} />
         ))}
@@ -141,8 +141,7 @@ function ProjectCard({ project, index, onClick }) {
       style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
       whileHover={{ scale: 1.01, borderColor: 'rgba(79,142,247,0.2)' }}
     >
-      {/* Image */}
-      <div className="relative h-36 overflow-hidden bg-white/3">
+      <div className="relative h-40 sm:h-36 overflow-hidden bg-white/3">
         {project.image ? (
           <motion.img
             src={project.image}
@@ -158,9 +157,7 @@ function ProjectCard({ project, index, onClick }) {
             </span>
           </div>
         )}
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        {/* Category badge */}
         <div
           className="absolute top-3 left-3 text-xs px-2 py-1 rounded-full font-mono text-white/50"
           style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(8px)' }}
@@ -169,7 +166,6 @@ function ProjectCard({ project, index, onClick }) {
         </div>
       </div>
 
-      {/* Content */}
       <div className="p-4">
         <div className="flex items-start justify-between gap-2 mb-1.5">
           <h3 className="text-white font-semibold text-sm">{project.title}</h3>
@@ -187,7 +183,6 @@ function ProjectCard({ project, index, onClick }) {
         </div>
       </div>
 
-      {/* Glow on hover */}
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity duration-500"
         style={{ boxShadow: 'inset 0 0 0 1px rgba(79,142,247,0.15), 0 0 40px rgba(79,142,247,0.05)' }}
       />
@@ -198,7 +193,6 @@ function ProjectCard({ project, index, onClick }) {
 function ProjectModal({ project, onClose }) {
   return (
     <>
-      {/* Backdrop */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -209,17 +203,15 @@ function ProjectModal({ project, onClose }) {
         style={{ background: 'rgba(0,0,0,0.8)', backdropFilter: 'blur(12px)' }}
       />
 
-      {/* Modal */}
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.97, y: 10 }}
         transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-        className="fixed inset-4 md:inset-auto md:left-1/2 md:-translate-x-1/2 md:top-1/2 md:-translate-y-1/2 md:w-[600px] z-50 rounded-2xl overflow-hidden"
-        style={{ background: '#111', border: '1px solid rgba(255,255,255,0.1)' }}
+        className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[600px] z-50 rounded-2xl overflow-y-auto"
+        style={{ background: '#111', border: '1px solid rgba(255,255,255,0.1)', maxHeight: '85vh' }}
       >
-        {/* Image */}
-        <div className="relative h-64 bg-white/3 overflow-hidden">
+        <div className="relative h-48 sm:h-64 bg-white/3 overflow-hidden flex-shrink-0">
           {project.image ? (
             <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
           ) : (
@@ -242,9 +234,8 @@ function ProjectModal({ project, onClose }) {
           </div>
         </div>
 
-        {/* Content */}
-        <div className="p-8">
-          <h2 className="text-2xl font-bold text-white mb-3">{project.title}</h2>
+        <div className="p-6 sm:p-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-3">{project.title}</h2>
           <p className="text-white/50 leading-relaxed mb-6">{project.description}</p>
 
           <div className="flex flex-wrap gap-2 mb-8">
@@ -260,7 +251,7 @@ function ProjectModal({ project, onClose }) {
           </div>
 
           {project.links.length > 0 && (
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
               {project.links.map((link) => (
                 <a
                   key={link.label}
