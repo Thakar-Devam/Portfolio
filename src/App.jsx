@@ -1,44 +1,33 @@
-import React from 'react'
-import Navbar from './common/Navbar'
-import Footer from './common/Footer'
-import Hero from './Hero'
-import Work from './Work'
-import About from './About'
-import Skill from './Skill'
+import React from 'react';
+import Navbar from './common/Navbar';
+import Footer from './common/Footer';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Experience from './sections/Experience';
+import Skills from './sections/Skills';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import ScrollProgress from './components/ScrollProgress';
+import CommandPalette from './components/CommandPalette';
+import LoadingScreen from './components/LoadingScreen';
 
-const App = () => {
+export default function App() {
   return (
-    <div>
-      <div className="font-inter">
+    <>
+      <LoadingScreen />
+      <ScrollProgress />
+      <CommandPalette />
+
+      <div className="min-h-screen">
         <Navbar />
         <Hero />
-        {['Work', 'About', 'Skills'].map((section) => {
-          let ComponentToRender;
-
-          if (section === 'Work') {
-            ComponentToRender = <Work />;
-          } else if (section === 'About') {
-            ComponentToRender = <About />;
-          } else if (section === 'Skills') {
-            ComponentToRender = <Skill />;
-          }
-
-          return (
-            <section
-              id={section.toLowerCase()}
-              key={section}
-              className="min-h-screen flex items-center justify-center bg-white"
-            >
-              {ComponentToRender}
-            </section>
-          );
-        })}
+        <Projects />
+        <Experience />
+        <Skills />
+        <About />
+        <Contact />
         <Footer />
-
       </div>
-
-    </div>
-  )
+    </>
+  );
 }
-
-export default App

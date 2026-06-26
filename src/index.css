@@ -1,18 +1,107 @@
 @import "tailwindcss";
-/* index.scss */
 
-/* index.css or tailwind.config.js */
-
-@font-face {
-  font-family: 'Inter', sans-serif;
-  src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@theme {
+  --animate-spin-slow: spin 10s linear infinite;
 }
 
+*, *::before, *::after { box-sizing: border-box; }
 
-html,
+:root {
+  --bg: #080808;
+  --bg-2: #0d0d0d;
+  --surface: #111111;
+  --surface-2: #1a1a1a;
+  --border: rgba(255,255,255,0.08);
+  --border-hover: rgba(255,255,255,0.15);
+  --text: #f0f0f0;
+  --text-2: #999;
+  --text-3: #555;
+  --accent: #4f8ef7;
+  --accent-dim: rgba(79,142,247,0.12);
+  --font: 'Inter', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
+
+/* Noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-3); }
+
+/* Selection */
+::selection { background: rgba(79,142,247,0.25); color: var(--text); }
+
+/* Cursor */
+.cursor-dot {
+  width: 6px; height: 6px;
+  background: white;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s, width 0.2s, height 0.2s, background 0.2s;
+}
+.cursor-dot.hovering { background: var(--accent); }
+
+/* Scroll progress */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  z-index: 9999;
+  transform-origin: left;
+}
+
+/* Section base */
+section { position: relative; }
+
+/* Glass */
+.glass {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+/* Radial glow helpers */
+.glow-blue {
+  background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), rgba(79,142,247,0.07), transparent 60%);
+}
+
+/* Mono font utility */
+.font-mono { font-family: var(--mono); }
+
+/* Magnetic button */
+.magnetic { display: inline-block; transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1); }
+
+/* Text gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #fff 0%, #999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+a, button, [role="button"] { cursor: pointer; }
